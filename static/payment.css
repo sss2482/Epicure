@@ -1,0 +1,176 @@
+* {
+    box-sizing: content-box;
+}
+body {
+    background-color: beige;
+}
+.container {
+    width: 97vw;
+    height: 97vh;
+    overflow: hidden;
+}
+#ordered-items{
+    padding-left:80px;
+    font-size: 20px;
+}
+.total-price{
+    padding-left:70px;
+}
+.main-container {
+    width: 90vw;
+    height: 86vh;
+    background-color: white;
+    margin: auto;
+    margin-top: 5vh;
+}
+.payment {
+    font-size: 60px;
+    font-family: poppins;
+    color: blue;
+    text-align: center;
+    margin-top: 20px;
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+.items {
+    padding-bottom: 0;
+}
+.items_p{
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 40px;
+    margin-left: 5vw;
+}
+.line {
+    border-left: 2px solid black;
+    height: 50vh;
+    margin-left: 14vw;
+}
+.lines {
+    border-top: 2px solid black;
+    margin: auto;
+    width: 80vw;
+}
+.payhere {
+    margin-top: 0;
+    font-size: 40px;
+    margin-left: 15vw;
+    margin-bottom: 0px;
+}
+.qr-image {
+    width: 200px;
+    height: 200px;
+    margin-left: 13vw ;
+    margin-top: 30px;
+}
+.Qr button {
+    margin-top: 10px;
+    margin-left: 17vw;
+    width: 80px;
+    height: 30px;
+    font-size: 16px;
+}
+.upi {
+    text-decoration: none;
+    color: black;
+    visibility: hidden;
+}
+.pick {
+    width: 80vw;
+    height: 100%;
+    margin: auto;
+}
+.delivery {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+.pick .delivery label {
+    font-size: 25px;
+}
+.pick .delivery input {
+    font-size: 15px;
+    width: 50vw;
+    height: 5vh;
+}
+
+@media screen and (max-width: 600px) {
+    .main-container {
+        width: 90vw;
+        height: 92vh;
+        background-color: white;
+        margin: auto;
+        margin-top: 3vh;
+        /* background: scroll; */
+        overflow: scroll;
+    }
+    .payment {
+        font-size: 50px;
+        font-family: poppins;
+        color: black;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .flex {
+        display: flex;
+        flex-direction: column;
+    }
+    .items_p{
+        margin-top: 0;
+        font-size: 30px;
+        margin-left: 5vw;
+    }
+    .line {
+        border-top: 1px solid black;
+        border-left: 0px;
+        height: 30px;
+        margin-left: 2vw;
+    }
+    .payhere {
+        margin-top: 0;
+        font-size: 30px;
+        margin-left: 5vw;
+        margin-bottom: 0px;
+    }
+    .qr-image {
+        width: 200px;
+        height: 200px;
+        margin-left: 18vw ;
+        margin-top: 20px;
+    }
+    .Qr button {
+        margin-top: 10px;
+        margin-left: 30vw;
+        width: 80px;
+        height: 30px;
+        font-size: 20px;
+        visibility: visible;
+    }
+    .upi {
+        visibility: visible;
+    }
+    .delivery {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+    }
+    .pick .delivery label {
+        font-size: 15px;
+    }
+    .pick .delivery input {
+        font-size: 15px;
+        width: 50vw;
+        height: 5vh;
+    }
+    .pick {
+        width: 80vw;
+        height: 10vh;
+        margin: auto;
+    }
+    .pick .delivery button {
+        height: 36px;
+    }
+
+}

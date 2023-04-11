@@ -1,0 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="StyleSheet" href="{% static 'Menu.css' %}">
+        <script src="{% static 'Menu.js' %}" type="text/javascript"></script>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png" type="image/x-icon">
+        <script src="https://kit.fontawesome.com/17305c1313.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant">
+        <title>Order Now</title>
+    </head>
+    <body>
+        <div class="container" id="cont">
+            <p class="head">IITJ Canteen</p>
+            <div class="non-veg">
+                <div class="column">
+                    {% for items_sublist in items %}
+                    <div class="row">
+                        
+                            
+                            
+    
+
+                        {% for item in items_sublist %}
+    
+                        <div class="cards">
+                            <a href="#"><img class="imag" src="{{item.photo.url}}" alt="{{item.cost}}" ></a>
+                            <p class="po"><spam class="items-list">{{item.name}}</spam><br><b>Rs. {{item.cost}}</b></p>
+                            <p class="rate">{{item.cost}}</p>
+                            <div class ="numb" id="numb">
+                                <i class="fa-solid fa-minus minus"></i>
+                                <input id='{{item.id}}' class="val"  type='text' name="qty" value="0">
+                                <input type="hidden" value="{{item.availability}}">
+                                <i class="fa-solid fa-plus plus"></i>
+                            </div>
+                        </div>
+
+                        {% endfor %}
+
+                       
+                    </div>
+
+                    {% endfor %}
+                    <!-- row 2 -->
+                    <div class="row">
+                        <div class="cards">
+                            <a href="#"><img class="imag" src="http://4.bp.blogspot.com/-Qq40v-WlcZE/TbIuPWvuJNI/AAAAAAAAADY/LZ3Nnlxmhto/s1600/Gobi-butter-masala-1.jpg" alt="Chicken Butter Masala" ></a>
+                            <p class="po"><spam class="items-list">Chicken Butter Masala</spam><br><b>Rs. 168</b></p>
+                            <p class="rate">168</p>
+                            <div class ="numb" id="numb">
+                                <i class="fa-solid fa-minus minus"></i>
+                                <input id='6' class="val"  type='text' name="qty" value="0">
+                                <i class="fa-solid fa-plus plus"></i>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <a href="#"><img class="imag" src="https://tse4.mm.bing.net/th?id=OIP.U8x9PQHrKt33gxNdpJHiIQHaEK&pid=Api&P=0" alt="Chicken Roll" ></a>
+                            <p class="po"><spam class="items-list">chicken Roll</spam><br><b>Rs. 99</b></p>
+                            <p class="rate">99</p>
+                            <div class ="numb" id="numb">
+                                <i class="fa-solid fa-minus minus"></i>
+                                <input id='7' class="val"  type='text' name="qty" value="0">
+                                <i class="fa-solid fa-plus plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row 3 -->
+                    <div class="row">
+                        <div class="cards">
+                            <a href="#"><img class="imag" src="https://tse2.mm.bing.net/th?id=OIP.oSDaFqbtN-ptSWuflKyA-QHaHa&pid=Api&P=0" alt="Egg Biryani" ></a>
+                            <p class="po"><spam class="items-list">Egg Biryani</spam><br><b>Rs. 64</b></p>
+                            <p class="rate">64</p>
+                            <div class ="numb" id="numb">
+                                <i class="fa-solid fa-minus minus"></i>
+                                <input id='8' class="val"  type='text' name="qty" value="0">
+                                <i class="fa-solid fa-plus plus"></i>
+                            </div>
+                            <!-- <button onclick="returntxt()">S</button> -->
+
+                        </div>
+                        <div class="cards">
+                            <a href="#"><img class="imag" src="https://tse1.mm.bing.net/th?id=OIP.bimHqa__vj2qo96yY9uqAAHaE8&pid=Api&P=0" alt="Kadai Chicken" ></a>
+                            <p class="po"><spam class="items-list">Kadai Chicken</spam><br><b>Rs. 168</b></p>
+                            <p class="rate">168</p>
+                            <div class ="numb" id="numb">
+                                <i class="fa-solid fa-minus minus"></i>
+                                <input id='9' class="val"  type='text' name="qty" value="0">
+                                <i class="fa-solid fa-plus plus"></i>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <a href="#"><img class="imag" src="https://tse4.mm.bing.net/th?id=OIP.dEyEvqfGH62TNJfiOrLy2gHaE8&pid=Api&P=0" alt="Chicken Sandwich" ></a>
+                            <p class="po"><spam class="items-list">Chicken Sandwich</spam><br><b>Rs. 103</b></p>
+                            <p class="rate">103</p>
+                            <div class ="numb" id="numb">
+                                <i class="fa-solid fa-minus minus"></i>
+                                <input id='10' class="val"  type='text' name="qty" value="0">
+                                <i class="fa-solid fa-plus plus"></i>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <a href="#"><img class="imag" src="https://tse3.mm.bing.net/th?id=OIP.TFcMp6CaRmM-3oqDHiYHEwHaGT&pid=Api&P=0" alt="Chicken Burger" ></a>
+                            <p class="po"><spam class="items-list">chicken Burger</spam><br><b>Rs. 120</b></p>
+                            <p class="rate">120</p>
+                            <div class ="numb" id="numb">
+                                <i class="fa-solid fa-minus minus"></i>
+                                <input id='11' class="val"  type='text' name="qty" value="0">
+                                <i class="fa-solid fa-plus plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row 4 -->
+                    <div class="row">
+                        <div class="cards">
+                            <a href="#"><img class="imag" src="https://tse1.mm.bing.net/th?id=OIP.PZyQfAWTw-N6APyKblgl4gHaEK&pid=Api&P=0" alt="Egg Bhurji" ></a>
+                            <p class="po"><spam class="items-list">Egg Bhurji</spam><br><b>Rs. 40</b></p>
+                            <p class="rate">40</p>
+                            <div class ="numb" id="numb">
+                                <i class="fa-solid fa-minus minus"></i>
+                                <input id='12' class="val"  type='text' name="qty" value="0">
+                                <i class="fa-solid fa-plus plus"></i>
+                            </div>
+                            <!-- <button onclick="returntxt()">S</button> -->
+
+                        </div>
+                        <div class="cards">
+                            <a href="#"><img class="imag" src="https://tse4.mm.bing.net/th?id=OIP.uQWEEBNimKS1DMxx3Qo8mwHaEK&pid=Api&P=0" alt="Chicken Noodles" ></a>
+                            <p class="po"><spam class="items-list">Chicken Noodles</spam><br><b>Rs. 105</b></p>
+                            <p class="rate">105</p>
+                            <div class ="numb" id="numb">
+                                <i class="fa-solid fa-minus minus"></i>
+                                <input id='13' class="val"  type='text' name="qty" value="0">
+                                <i class="fa-solid fa-plus plus"></i>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <a href="#"><img class="imag" src="https://tse1.mm.bing.net/th?id=OIP.OMQdrkwMfv9T-NhDhICWggHaE3&pid=Api&P=0" alt="Egg Fried Rice" ></a>
+                            <p class="po"><spam class="items-list">Egg Fried Rice</spam><br><b>Rs. 68</b></p>
+                            <p class="rate">68</p>
+                            <div class ="numb" id="numb">
+                                <i class="fa-solid fa-minus minus"></i>
+                                <input id='14' class="val"  type='text' name="qty" value="0">
+                                <i class="fa-solid fa-plus plus"></i>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <a href="#"><img class="imag" src="https://tse1.mm.bing.net/th?id=OIP.LdT9PmR8a8afgxDG07GXpAHaEK&pid=Api&P=0" alt="Chicken Spicy Roll" ></a>
+                            <p class="po"><spam class="items-list">chicken Spicy Roll</spam><br><b>Rs. 99</b></p>
+                            <p class="rate">99</p>
+                            <div class ="numb" id="numb">
+                                <i class="fa-solid fa-minus minus"></i>
+                                <input id='15' class="val"  type='text' name="qty" value="0">
+                                <i class="fa-solid fa-plus plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row 5 -->
+                    <div class="row">
+                        <div class="cards">
+                            <a href="#"><img class="imag" src="https://tse3.mm.bing.net/th?id=OIP.4b-4M24PbeI62L1ZrXteFwHaEK&pid=Api&P=0" alt="Punjabi Chicken" ></a>
+                            <p class="po"><spam class="items-list">Punjabi Chicken</spam><br><b>Rs. 158</b></p>
+                            <p class="rate">158</p>
+                            <div class ="numb" id="numb">
+                                <i class="fa-solid fa-minus minus"></i>
+                                <input id='16' class="val"  type='text' name="qty" value="0">
+                                <i class="fa-solid fa-plus plus"></i>
+                            </div>
+                            <!-- <button onclick="returntxt()">S</button> -->
+
+                        </div>
+                        <div class="cards">
+                            <a href="#"><img class="imag" src="https://tse4.mm.bing.net/th?id=OIP.MPh_6ChMh3jVAaiBLPYJsAHaE8&pid=Api&P=0" alt="Bread Omlete" ></a>
+                            <p class="po"><spam class="items-list">Bread Omlete</spam><br><b>Rs. 34</b></p>
+                            <p class="rate">34</p>
+                            <div class ="numb" id="numb">
+                                <i class="fa-solid fa-minus minus"></i>
+                                <input id='17' class="val"  type='text' name="qty" value="0">
+                                <i class="fa-solid fa-plus plus"></i>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <a href="#"><img class="imag" src="https://tse4.mm.bing.net/th?id=OIP.zViBKwlc4ZvKlrxM770WqgHaFE&pid=Api&P=0" alt="Egg Porata" ></a>
+                            <p class="po"><spam class="items-list">Egg Porata</spam><br><b>Rs. 32</b></p>
+                            <p class="rate">32</p>
+                            <div class ="numb" id="numb">
+                                <i class="fa-solid fa-minus minus"></i>
+                                <input id='18' class="val"  type='text' name="qty" value="0">
+                                <i class="fa-solid fa-plus plus"></i>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <a href="#"><img class="imag" src="https://tse2.mm.bing.net/th?id=OIP.21xfGQ9jUczQhBfBTgASHwHaEJ&pid=Api&P=0" alt="Chicken Tandoori" ></a>
+                            <p class="po"><spam class="items-list">Chicken Tandoori</spam><br><b>Rs. 140</b></p>
+                            <p class="rate">140</p>
+                            <div class ="numb" id="numb">
+                                <i class="fa-solid fa-minus minus"></i>
+                                <input id='19' class="val"  type='number' min="0" max="15" name="qty" value="0">
+                                <i class="fa-solid fa-plus plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- pop up -->
+            <div class="container3" id="container3">
+                <header>
+                    <p class="matter-text"><b>Items you Ordered!</b></p>
+                </header>
+                <div class="matter">
+                    <div class="items">
+                        <p class="i1" id="20">Chicken Biryani 2 Pieces<button class="it1" id="40">0</button></p>
+                        <p class="i2" id="21">Chicken Biryani 3 Pieces<button value="0" class="it2" id="41">0</button></p>
+                        <p class="i3" id="22">Crispy Chicken 8 pieces <button value="0" class="it3" id="42">0</button></p>
+                        <p class="i4" id="23">chicken Fried Rice<button value="0" class="it4" id="43">0</button></p>
+                        <p class="i5" id="24">Chicken Momos<button value="0" class="it5" id="44">0</button></p>
+                        <p class="i6" id="25">Chicken Lolipop<button value="0" class="it6" id="45">0</button></p>
+                        <p class="i7" id="26">Chicken Butter Masala<button value="0" class="it7" id="46">0</button></p>
+                        <p class="i8" id="27">chicken Roll<button value="0" class="it8" id="47">0</button></p>
+                        <p class="i9" id="28">Egg Biryani<button value="0" class="it9" id="48">0</button></p>
+                        <p class="i10" id="29">Kadai Chicken<button value="0" class="it10" id="49">0</button></p>
+                        <p class="i11" id="30">Chicken Sandwich<button value="0" class="it11" id="50">0</button></p>
+                        <p class="i20" id="31">Chicken Burger<button value="0" class="it11" id="51">0</button></p>
+                        <p class="i12" id="32">Egg Bhurji<button value="0" class="it12" id="52">0</button></p>
+                        <p class="i13" id="33">Chicken Noodles<button value="0" class="it13" id="53">0</button></p>
+                        <p class="i14" id="34">Egg Fried Rice<button value="0" class="it14" id="54">0</button></p>
+                        <p class="i15" id="35">chicken Spicy Roll<button value="0" class="it15" id="55">0</button></p>
+                        <p class="i16" id="36">Punjabi Chicken<button value="0" class="it16" id="56">0</button></p>
+                        <p class="i17" id="37">Bread Omlete<button value="0" class="it17" id="57">0</button></p>
+                        <p class="i18" id="38">Egg Porata<button value="0" class="it18" id="58">0</button></p>
+                        <p class="i19" id="39">Chicken Tandoori<button value="0" class="it19" id="59">0</button></p>
+                        <p class="" id="100">Total Amount<button class="it20" id="101">0</button></p>
+                    </div>
+                </div>
+                <form method="post" action="">
+                    <input type="hidden" name="orderTotal" id="orderTotal" value="0">
+                    <input type="hidden" name="orderedItems" id="orderedItems" value="0">
+                    <div class="fotter">
+                        <button onclick="window.location.href=''" type="reset" class="btn-cancel">Cancel</button>
+                        <button class="btn1" type="submit">Confirm</button>
+                    </div>
+                    {% csrf_token%}
+                </form>
+            </div>
+            <fotter>
+                <div class="btn-fotter">
+                    <button onclick="orderit()" id="orderit" class="order">Order</button>
+                </div>
+            </fotter>
+        </div>
+    </body>
+</html>

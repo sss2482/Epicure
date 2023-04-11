@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="StyleSheet" href="Login.css">
+    <script src="Login.js" type="text/javascript" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/17305c1313.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant">
+    <title>Epicure - Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="Logo-container">
+            <img src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png" alt="Logo" />
+            <p>Epicure</p>
+        </div>
+        <div class="info-container">
+            <p class="p">Sign in</p>
+            <form method="post" action="">
+                <label for="email" id="email-label">Email or mobile number</label>
+                <input name="email" id="email-input" class="input" placeholder="Email..." type="text" required/>
+                <label for="pass" id="pass-label" class="pass-label">Password</label>
+                <div class="pass-box">
+                    <input name="pass" id="pass-input" placeholder="Password" type="password" class="pass-input" required/>
+                    <i class="fa-sharp fa-solid fa-eye icon-1"  id="icon-1" onclick="passwordVisibility()"></i>
+                </div>
+                <a class="forgot" href="#">Forgot your password?</a>
+                <input type="submit" value="Sign in">
+                <input type="hidden" name="next" value="{{ next }}" />
+                {% csrf_token %}
+            </form>
+
+            <div class="wrapper">
+                <div class="divider div-transparent div-dot"></div>
+            </div>
+
+            <div class="google-signup">
+                <div class="google">
+
+                </div>
+                <div class="facebook">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="divider">
+            <p class="line"></p>
+            <p>New to Epicure?</p>
+            <p class="line"></p>
+        </div>
+        <button class="btn-create-account" type="button"><a href="Signup.html" style="text-decoration: none;color: black;">Create your Epicure account</a> </button>
+        <div class="wrapper">
+            <div class="divider div-transparent div-dot"></div>
+        </div>
+        <p>© 2023, Epicure, Inc. or its affiliates</p>
+    </div>
+</body>
+</html>

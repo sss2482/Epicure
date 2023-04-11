@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payment Page</title>
+        <!-- <script src="C:\Users\AKARSH\Downloads\qrcodejs-master\qrcodejs-master\qrcode.js"></script>
+         -->
+         <!-- <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/dist/qrcode.min.js"></script> -->
+
+        <link rel="stylesheet" href="{% static 'payment.css' %}">
+        
+        <script src="https://kit.fontawesome.com/9fa9e4c93e.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="https://www.apaservices.org/images/title-payment-platform_tcm9-282170.jpg">
+    </head>
+    <body>
+        <div class="container">
+            <div class="main-container">
+                <p class="payment">Payment</p>
+                <div class="flex">
+                    <div class="items">
+                        <p class="items_p" id="hi">Items you ordered!!</p>
+                        <ul id="ordered-items"></ul>
+                        <h2  class="total-price">Total Price:</h2>
+
+                    </div>
+                    <div>
+
+                    </div>
+                    <div class="line">
+                    </div>
+                    <!-- payment Qr -->
+                    <div class="Qr">
+                        <p class="payhere">Pay Here</p>
+                        
+                        <!-- <img src="https://api.qrserver.com/v1/create-qr-code/?data=upi%3A%2F%2Fpay%3Fpa%3D7842559379%40axl%26pn%3DEpicure%26tn%3DTest%2520Payment%26am%3D1%26cu%3DINR%3E%26tr%3D%3C1%3Esize=200x200" class="qr-image" alt="UPI QR code"> -->
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?data=upi%3A%2F%2Fpay%3Fpa%3D7842559379%40axl%26pn%3DEpicure%26tn%3DTest%2520Payment%26am%3D1%26cu%3DINR%3E%26tr%3D%3C1%3Esize=200x200" class="qr-image" alt="UPI QR code">
+                        <button type="button" Id="pay-now-btn" >Pay Now</button>
+                        <!-- <p class="payhere">Pay Here</p> -->
+                        <br>
+                        <br>
+                        <!-- <button><a href="upi://pay?pa=7997859889@ybl&pn=Geda%Durga%Vara%Praveen&cu=INR" class="upi">Pay</a> </button> -->
+                        
+                    </div>
+                </div>
+                <div class="lines">
+                </div>
+                <div class="pick">
+                    <div class="delivery">
+                        <label for="delivery">Delivery address</label>
+                        <input type="text" name="delivery" placeholder="Address...">
+                        <button type="button" style="font-size: 15px; border: 1px solid black;">Deliver</button>
+                        <!-- <label for="photo" >Payment Receipt :</label>
+                        <input type="image" name="photo"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="{% static 'payment.js' %}" defer data-order-total="{{orderTotal}}"></script>
+        {{ orderedItems|json_script:"orderedItems"}}
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </body>
+</html>

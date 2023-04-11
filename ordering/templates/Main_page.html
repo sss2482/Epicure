@@ -1,0 +1,137 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="StyleSheet" href="{% static 'Main_page.css' %}">
+    <script src="{% static 'Main_page.css' %}" type="text/javascript" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/4789366d85.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Epicure</title>
+  </head>
+  <body>
+    <header>
+        <div class="container">
+             <div class="icon">
+              <img class ="icons" src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png" alt="Order Now!">
+             </div>
+             <div class="text">
+                <h2 class="name" id="name">Epicure</h2>
+             </div>
+             <div class="buttons">
+                <button type="button" class="btn" onclick="myfunc()">About Us</button>
+                
+                <button type="button" class="btn">My Orders</button>
+             </div>
+             <div class="hower">
+               <button type="button" id="menu" class="btn">Menu</button>
+               <div class="items">
+                <a href="#">Chicken Biryani</a>
+                <a href="#">Chicken Fried Rice</a>
+                <a href="#">Chicken Roll</a>
+                <a href="#">Chicken Noodles</a>
+                <a href="#">Chicken Butter Masala</a>
+                <!-- <a href="#">Chicken khadai</a>
+                
+                <a href="#">Chicken Crispy</a>
+                <a href="#">Paneer curry</a>
+                <a href="#">Chicken Lolipop</a>
+                <a href="#">Chicken Burger</a> -->
+                <a id="more" heref="">More Items <ion-icon class="ion" name="arrow-forward-outline"></ion-icon>
+                </a>
+             </div>
+            </div>
+        </div>
+
+    </header>
+    
+    <div class="pic">
+
+      <img class="imh" src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" >
+      <img class="imh" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+      <img class="imh" src="https://images.pexels.com/photos/941869/pexels-photo-941869.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" >
+      <div class="order">
+        <p class="quote" id="quote">
+             There is no sincere love than the love of food
+        </p>
+        <a href="order">
+        <button type="button" class="order_now">Order Now!</button>
+        </a>
+      </div>
+    </div>
+          <!-- About us -->
+    <div class="aboutus">
+            <div class="row">
+                <img src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png" avatar="logo" class="logo-icon">
+                  
+                <div class="column">
+                    <p class="intro"> About Us</p>
+                    <p class="intro-matter">This is website which save you time when you want to eat in canteen.</p>
+                </div>
+                <div style="width: 30vw;"></div>
+            </div>
+          </div>
+      
+        <!-- Most rated items -->
+    <div class="container-2">   
+            <div class="nv-box">
+                <p class="nu-text">Most rated Non-Veg Items</p>
+            </div>
+            <div class="flex">
+                <div class="nv-items">
+                    <div class="flipcard">
+                        <div class="flipcard-inner">
+                            <div class="flipcard-front">
+                                <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg" class="chick" avatar="Biryani">
+                            </div>
+                            <div class="flipcard-back">
+                                <h4>CHICKEN BIRYANI</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nv-items1">
+                    <div class="flipcard">
+                        <div class="flipcard-inner">
+                            <div class="flipcard-front">
+                                <img src="https://images.unsplash.com/photo-1606502973842-f64bc2785fe5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGZyaWVkJTIwY2hpY2tlbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" class="chick" avatar="Biryani">
+                            </div>
+                            <div class="flipcard-back">
+                                <h4>CRISPY CHICKEN</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nv-items2">
+                    <div class="flipcard">
+                        <div class="flipcard-inner">
+                            <div class="flipcard-front">
+                                <img src="https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg" class="chick" avatar="Biryani">
+                            </div>
+                            <div class="flipcard-back">
+                                <h4>CHICKEN BIRYANI</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <footer>
+      <div class="footer">
+                <p class="p">This ia a website which will save your time instead of wasting it in canteen.</p>
+                <div class="flex1" id="about">
+                    <!-- <p class="con">Contact us</p> -->
+                    <span><a href="mailto:durgavarapraveen@gmail.com" target="_blank"><i class="fa-solid fa-envelope mail" ></i></a></span>
+                    <span><a href="https://www.linkedin.com/in/geda-durga-vara-praveen-5a4348237/" target="_blank"><i class="fa-brands fa-linkedin linkedin"></i></a></span>
+                    <span><a href="https://github.com/durgavarapraveen" target="_blank"><i class="fa-brands fa-github linkedin"></i></a></span>
+                    <span><a href="https://www.instagram.com/mr.un_happy/" target="_blank"><i class="fa-brands fa-instagram linkedin"></i></a></span>
+                </div>
+            </div>
+    </footer>
+    </div>
+  </body>
