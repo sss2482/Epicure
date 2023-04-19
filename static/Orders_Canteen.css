@@ -1,0 +1,110 @@
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100vw;
+    height: 100%;
+    background-color:beige;
+    /* background-image: url('https://cdn.thedesigninspiration.com/wp-content/uploads/2013/11/Food-background-l.jpg'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.p1 {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    position: sticky;
+}
+.p1 p{
+   margin: auto;
+   font-size: 50px;
+   font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+}
+.box1 {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.order {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #000;
+}
+.b111 {
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+}
+.b112 {
+    margin-left: 10%;
+    font-size: 20px;
+}
+.b12 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+.b121 {
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+}
+.b122 {
+    padding-top: 5px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.b131 {
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+}
+.b132 {
+    margin-left: 10%;
+    font-size: 20px;
+}
+.b14 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+.b141 {
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 5px;
+}
+.b14 button {
+    padding: 6px 15px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    outline: none;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+form {
+    display: flex;
+    justify-content: center;
+}
+form button {
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 20px;
+    margin-left: 30px;
+}

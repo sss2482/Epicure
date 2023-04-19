@@ -3,10 +3,11 @@
 }
 body {
     background-color: beige;
+    overflow-y: scroll;
 }
 .container {
     width: 97vw;
-    height: 97vh;
+    height: 100%;
     overflow: hidden;
 }
 #ordered-items{
@@ -26,7 +27,7 @@ body {
 .payment {
     font-size: 60px;
     font-family: poppins;
-    color: blue;
+    color: #E67E22;
     text-align: center;
     margin-top: 20px;
 }
@@ -36,6 +37,7 @@ body {
 }
 .items {
     padding-bottom: 0;
+    width: 50vw;
 }
 .items_p{
     margin-top: 0;
@@ -46,8 +48,10 @@ body {
 .line {
     border-left: 2px solid black;
     height: 50vh;
-    margin-left: 14vw;
+    margin-left: 0;
 }
+
+
 .lines {
     border-top: 2px solid black;
     margin: auto;
@@ -65,37 +69,61 @@ body {
     margin-left: 13vw ;
     margin-top: 30px;
 }
-.Qr button {
-    margin-top: 10px;
-    margin-left: 17vw;
-    width: 80px;
-    height: 30px;
-    font-size: 16px;
-}
 .upi {
     text-decoration: none;
     color: black;
     visibility: hidden;
 }
-.pick {
-    width: 80vw;
-    height: 100%;
-    margin: auto;
+.Details{
+    margin-top:17px;
+    margin-left:100px;
 }
-.delivery {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
+label{
+    font-size: 25px;;
 }
-.pick .delivery label {
-    font-size: 25px;
+input[type="number"]{
+    height:30px;
+    width:180px;
 }
-.pick .delivery input {
-    font-size: 15px;
-    width: 50vw;
-    height: 5vh;
+.choose{
+    display:flex;
+    flex-direction: row;
 }
-
+.submit{
+    background-color: #E67E22;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px 4px 150px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.cancel{
+    background-color: #E67E22;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top:4px;
+    margin-bottom:4px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.submit:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.cancel:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
 @media screen and (max-width: 600px) {
     .main-container {
         width: 90vw;
@@ -173,4 +201,13 @@ body {
         height: 36px;
     }
 
+}
+
+#id_for_address{
+    margin-top: 23%;
+}
+
+#id_address{
+    
+    width: 500px;
 }

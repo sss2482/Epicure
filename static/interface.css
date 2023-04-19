@@ -20,6 +20,7 @@ body {
     background-attachment: fixed;
     background-repeat: round;
 }
+
 .container {
     margin: 10px 20px;
     width: 97vw;
@@ -28,16 +29,42 @@ body {
     overflow-x: scroll;
     visibility: visible;
 }
+
 .head {
     font-size: 60px;
     font-family: 'poppins';
     font-weight: 600;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     font-style: italic;
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 500px ;
     color: #fff;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    margin-bottom:30px;
+}
+.top >a{
+    background-color:white;
+    text-align: center;
+    padding-top:22px;
+    margin-left:320px;
+    width:120px;
+    font-size: 20px;
+    transition:font-size 1.5s;
+    transition:background-color 1.5s;
+}
+
+.top >a:hover{
+    background-color: #c07f46;
+    
+    font-size: 22px;
+}
+.connect{
+    text-decoration: none;
+    color:black;
 }
 .row {
     display: flex;

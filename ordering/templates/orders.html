@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Orders</title>
+        <link rel="stylesheet" href="{%static 'orders.css' %}">
+        <script src="https://kit.fontawesome.com/9fa9e4c93e.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png" type="image/x-icon">
+    </head>
+    <body>
+        <h1 class="titl">Your Orders</h1>
+        <div class="orders">
+            {% for order, orderdetails in ordersdict.items %}
+            <div class="order">
+                <p class="myorder">{{orderdetails}}</p>
+                <p class="cost">{{order.cost}}</p>
+                <p class="status">{{order.status}}</p>
+                
+            </div>
+            {% endfor %}
+        </div>
+        <script src="{% static 'orders.js' %}"></script>
+    </body>
+</html>

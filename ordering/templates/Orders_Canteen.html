@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="StyleSheet" href="{% static 'Orders_Canteen.css' %}">
+        <!-- <script src="Home.js" type="text/javascript" defer></script> -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png" type="image/x-icon">
+        <script src="https://kit.fontawesome.com/17305c1313.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>Order_Recieved</title>
+      </head>
+<body>
+    <div class="container">
+        <div class="main-container">
+            <div class="p1">
+                <p>Order's Recieved</p>
+            </div>
+            <div class="box1"> 
+                
+                {% for order, orderdetails in ordersdict.items %}
+
+                <div class="order">
+                    <div class="b11">
+                        <p class="b111">Items</p>
+                        <P class="b112">{{orderdetails}}</P>
+                    </div>
+                    <div class="b12">
+                        <p class="b121">Amount</p>
+                        <p class="b122">{{order.cost}}</p>
+                    </div>
+                    <div class="b13">
+                        <p class="b131">Address</p>
+                        <p class="b132">{{order.address}}</p>
+                    </div>
+                    <div class="b14">
+                        <p class="b141">Status</p>
+                        <button>{{order.status}}</button>
+                    </div>
+                    <form action="" method="post">
+                        <input type="hidden" name="order_id" value="{{order.id}}">
+                        <button type="submit">Delivered</button>
+                        {% csrf_token %}
+                    </form>
+                </div>
+                
+                {% endfor %}
+
+
+                
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

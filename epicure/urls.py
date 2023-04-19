@@ -20,16 +20,22 @@ from django.conf import settings
 
 
 
-from ordering.views import mainv, orderv, paymentv, items_availv
-from users.views import signupv, loginv
+from ordering.views import mainv, orderv, paymentv, items_availv, payment_approvalv, myordersv, orders_canteenv, homev
+from users.views import signupv, loginv, logoutv
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', mainv, name='Mainpage' ),
+    path('', homev, name='Home'),
+    path('main', mainv, name='Mainpage' ),
     path('order', orderv, name='Order'),
     path('payment', paymentv, name='Payment'),
     path('items_availability', items_availv, name='Items_availability'),
     path('signup', signupv, name='Signup'),
     path('login', loginv, name='Login'),
+    path('logout', logoutv, name='Logout'),
+    path('payment_approval', payment_approvalv, name="Payment_approval"),
+    path('myorders', myordersv, name='Myorders'),
+    path('orders_canteen', orders_canteenv, name='Orders_canteen'),
+    
     # path('accounts/', include('accountsn.urls')),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -3,26 +3,23 @@ var increment=document.getElementsByClassName('plus');
 var decrement=document.getElementsByClassName('minus');
 
 console.log(document.getElementById('20'));
-console.log(increment)
-console.log(increment.length)
+
 let increment_length= increment.length;
-for (var i=0; i< increment_length; i++){
-    console.log(increment);
-}
+
 
 for (var i=0;i<increment.length;i++){
     
     var button=increment[i];
-    console.log(button.parentElement.children[2].value)
+
     button.addEventListener('click', function(event){
         var clicked = event.target;
-        console.log(clicked);
+
         var out = clicked.parentElement.children[1];
         var avail = clicked.parentElement.children[2];
         // console.log();
         var inputValue =out.value;
         // console.log(inputValue);
-        console.log(avail.value)
+
         var newd = parseInt(inputValue)+1;
         if (newd>parseInt(avail.value)){
 

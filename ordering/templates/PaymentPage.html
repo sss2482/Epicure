@@ -22,8 +22,10 @@
                     <div class="items">
                         <p class="items_p" id="hi">Items you ordered!!</p>
                         <ul id="ordered-items"></ul>
-                        <h2  class="total-price">Total Price:</h2>
+                        <h2  id="total-price">Total Price:</h2>
 
+                        <h2 for="id_address" class="address" id="id_for_address">Address:</h2>
+                        <input type="text" class="address" name="address" id="id_address">
                     </div>
                     <div>
 
@@ -33,32 +35,38 @@
                     <!-- payment Qr -->
                     <div class="Qr">
                         <p class="payhere">Pay Here</p>
-                        
-                        <!-- <img src="https://api.qrserver.com/v1/create-qr-code/?data=upi%3A%2F%2Fpay%3Fpa%3D7842559379%40axl%26pn%3DEpicure%26tn%3DTest%2520Payment%26am%3D1%26cu%3DINR%3E%26tr%3D%3C1%3Esize=200x200" class="qr-image" alt="UPI QR code"> -->
                         <img src="https://api.qrserver.com/v1/create-qr-code/?data=upi%3A%2F%2Fpay%3Fpa%3D7842559379%40axl%26pn%3DEpicure%26tn%3DTest%2520Payment%26am%3D1%26cu%3DINR%3E%26tr%3D%3C1%3Esize=200x200" class="qr-image" alt="UPI QR code">
-                        <button type="button" Id="pay-now-btn" >Pay Now</button>
-                        <!-- <p class="payhere">Pay Here</p> -->
                         <br>
                         <br>
+                        <form id='form' method="post" action="">
+                            <div class="Details">
+                                <label  for="transaction_id" >Enter the transaction Id:</label>
+                                <input type="text" name="transaction_id" id="id_transaction_id" placeholder="Transaction Id" ><br><br>
+                                <input type="hidden" value="{{orderTotal}}" name="orderTotal">
+                                <input type="hidden" value="{{orderedItems}}" name="orderedItems"> 
+                                
+                                <input type="hidden" name="address" id="input_address" value="">
+                                <input type="hidden" value="{{order_id}}" name="order_id">
+                                
+                                <div class="choose">
+                                    <button type="submit" name="cancel" value="" class="cancel"  >Cancel</button>
+                                    <button type="submit" id="id_submit" name="submit" value="Submit" class="submit" onclick="done()"  >Submit</button>
+                                </div>
+                            </div>
+                            {% csrf_token %}
+                        </form>
+                        
+                        
                         <!-- <button><a href="upi://pay?pa=7997859889@ybl&pn=Geda%Durga%Vara%Praveen&cu=INR" class="upi">Pay</a> </button> -->
                         
                     </div>
                 </div>
                 <div class="lines">
                 </div>
-                <div class="pick">
-                    <div class="delivery">
-                        <label for="delivery">Delivery address</label>
-                        <input type="text" name="delivery" placeholder="Address...">
-                        <button type="button" style="font-size: 15px; border: 1px solid black;">Deliver</button>
-                        <!-- <label for="photo" >Payment Receipt :</label>
-                        <input type="image" name="photo"> -->
-                    </div>
-                </div>
+                
             </div>
         </div>
-        <script src="{% static 'payment.js' %}" defer data-order-total="{{orderTotal}}"></script>
-        {{ orderedItems|json_script:"orderedItems"}}
+        <script src="{% static 'payment.js' %}" defer data-order-details="{{orderedItems}}" data-total-cost="{{orderTotal}}"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </body>
 </html>

@@ -1,8 +1,9 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="StyleSheet" href="Login.css">
-    <script src="Login.js" type="text/javascript" defer></script>
+    <link rel="StyleSheet" href="{% static 'Login.css' %}">
+    <script src="{% static 'Login.js' %}" type="text/javascript" defer></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,7 +52,7 @@
             <p>New to Epicure?</p>
             <p class="line"></p>
         </div>
-        <button class="btn-create-account" type="button"><a href="Signup.html" style="text-decoration: none;color: black;">Create your Epicure account</a> </button>
+        <button class="btn-create-account" type="button"><a href="signup" style="text-decoration: none;color: black;">Create your Epicure account</a> </button>
         <div class="wrapper">
             <div class="divider div-transparent div-dot"></div>
         </div>

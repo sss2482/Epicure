@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Approval Page</title>
+        <link rel="stylesheet" href="{% static 'approval.css' %}">
+        <script src="https://kit.fontawesome.com/9fa9e4c93e.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="https://www.cambridgeinternational.org/Images/Join_icon_blue_border.svg">
+    </head>
+    <body>
+        <p class="approve">Approval of the Orders</p>
+        <table style="width:100%">
+            <tr style="background-color: #ecad76;">
+                <th>Id</th>
+                <th>Name</th>
+                <th>Contact Number</th>
+                <th>Transaction_Id</th>
+                <th>Amount</th>
+                <th>Status</th>
+            </tr>
+            {% for order in orders %}
+            <form method="post" action="">
+                <tr >
+                    <td>{{order.id}}</td>
+                    <td>{{order.user}}</td>
+                    <td>{{order.user.phone_number}}</td>
+                    <td>{{order.transaction_id}}</td>
+                    <td>{{order.cost}}</td>
+
+                    <input type="hidden" name="order_id" value="{{order.id}}">
+
+                    <td>
+                        
+                            <p>Verification is Pending</p>
+                            <select class="mySelect">
+                                <option name="verify_status" value="Verified">Payment done Successfully</option>
+                                <option name="verify_status" value="Rejected">Payment not done</option>
+                            </select>
+                            <button type="submit" class="proceed" >Proceed</button>
+                        
+                    </td>
+                </tr>
+                {% csrf_token %}
+            </form>
+            {% endfor %}
+           
+        </table>
+        <!-- <script src="{% static 'approval.js' %}"></script> -->
+    </body>
+</html>

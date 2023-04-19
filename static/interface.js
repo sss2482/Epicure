@@ -43,7 +43,10 @@ for (var i=0;i<decrement.length;i++){
     })
 }
 
+function change(){
+    document.getElementById('changeform').submit();
 
+}
 
 var a=2;
 var sum=0;
@@ -93,8 +96,4 @@ function orderit(){
     var xox = document.getElementsByClassName('container');
     xox.style.visibility = "hidden";
     // xox.style.pointer-events = 'none';
-}
-
-function change(){
-    document.getElementById('changeform').submit();
 }
